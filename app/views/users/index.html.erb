@@ -1,0 +1,39 @@
+<h1>Listado de Usuarios</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Sexo</th>
+    <th>Tipo de Documento</th>
+    <th>Numero de Documento</th>
+    <th>Correo</th>
+    <th>Contraseña</th>
+    <th>Fecha de Nacimiento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.lastname %></td>
+    <td><%= user.maidenname %></td>
+    <td><%= user.sex %></td>
+    <td><%= user.documenttype.shortname %></td>
+    <td><%= user.documentnumber %></td>
+    <td><%= user.email %></td>
+    <td><%= user.password %></td>
+    <td><%= user.datebirth %></td>
+    <td><%= link_to 'Mostrar', user %></td>
+    <td><%= link_to 'Editar', edit_user_path(user) %></td>
+    <td><%= link_to 'Eliminar', user, confirm: '¿Esta seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Usuario', new_user_path %>

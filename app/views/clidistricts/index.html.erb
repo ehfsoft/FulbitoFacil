@@ -1,0 +1,25 @@
+<h1>Listing clidistricts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Postalcode</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clidistricts.each do |clidistrict| %>
+  <tr>
+    <td><%= clidistrict.name %></td>
+    <td><%= clidistrict.postalcode %></td>
+    <td><%= link_to 'Show', clidistrict %></td>
+    <td><%= link_to 'Edit', edit_clidistrict_path(clidistrict) %></td>
+    <td><%= link_to 'Destroy', clidistrict, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clidistrict', new_clidistrict_path %>

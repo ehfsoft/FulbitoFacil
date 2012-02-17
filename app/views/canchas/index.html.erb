@@ -1,0 +1,38 @@
+<h1>Listing canchas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Local</th>
+	<th>Description</th>
+	<th>Dia</th>
+	<th>Hora</th>
+	<th>Horafin</th>
+	<th>Preciolav</th>
+	<th>Preciosd</th>
+	
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @canchas.each do |cancha| %>
+  <tr>
+    <td><%= cancha.name %></td>
+	<td><%= cancha.local.name %></td>
+    <td><%= cancha.description %></td>
+	<td><%= cancha.diasem %></td>
+	<td><%= cancha.hora %></td>
+	<td><%= cancha.horafin %></td>
+	<td><%= cancha.preciolav %></td>
+	<td><%= cancha.preciosd %></td>
+    <td><%= link_to 'Show', cancha %></td>
+    <td><%= link_to 'Edit', edit_cancha_path(cancha) %></td>
+    <td><%= link_to 'Destroy', cancha, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cancha', new_cancha_path %>

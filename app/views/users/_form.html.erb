@@ -1,0 +1,65 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+  <td>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this local from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    </td>
+  <% end %>
+
+  <div class="field">
+  	<%= f.label "Nombre" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Apellido Paterno" %>
+  	<%= f.text_field :lastname %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Apellido Materno" %>
+  	<%= f.text_field :maidenname %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Sexo" %>
+    <%= f.radio_button :sex, "Femenino" %> Femenino
+	<%= f.radio_button :sex, "Masculino" %> Masculino
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Tipo de Documento" %>
+    <%= f.select :documenttype_id, @documenttype_array, :prompt => "Seleccione tipo de documento"  %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Numero de Documento" %>
+    <%= f.text_field :documentnumber,
+    :size => User::MAX_SIZECAMPO,
+    :maxlength => User::MAX_NUMDOCUMENTO %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Correo" %>
+    <%= f.text_field :email %>
+    <%= f.label "Repetir Correo" %>
+    <%= f.text_field :email_confirmation %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Contraseña" %>
+    <%= f.password_field :password %>
+    <%= f.label "Repetir Contraseña" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field"><br />
+  	<%= f.label "Fecha de Nacimiento" %>
+ 	<%= f.date_select :datebirth , :start_year => 1914, :end_year => Time.now.year - 5  %>
+  </div>
+    
+  
+  
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

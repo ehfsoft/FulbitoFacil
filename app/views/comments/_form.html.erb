@@ -1,0 +1,18 @@
+<%= form_for(@comment) do |f| %>
+  
+  <div class="field">
+    <%= f.label :Comentario %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label "Calificacion" %><br />
+    <%= f.radio_button :calification, "1" %> 1
+	<%= f.radio_button :calification, "2" %> 2
+	<%= f.radio_button :calification, "3" %> 3
+	<%= f.radio_button :calification, "4" %> 4
+	<%= f.radio_button :calification, "5" %> 5
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

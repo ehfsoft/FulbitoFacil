@@ -1,0 +1,42 @@
+<%= form_for(@advertising) do |f| %>
+  
+  <div class="field">
+    <%= f.label :Titulo %><br />
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Contenido %><br />
+    <%= f.text_area :content %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :FechaInicio %><br />
+    <%= f.date_select :startdate %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :FechaFin %><br />
+    <%= f.date_select :enddate %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Tarifa %><br />
+    <%= f.number_field :rate %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Ubicacion %><br />
+	<%= f.radio_button :location, "Pagina Principal" %> Pagina Principal
+	<%= f.radio_button :location, "Pagina del Cliente" %> Pagina del Cliente
+	<%= f.radio_button :location, "Pagina del Dueno" %> Pagina del Dueno
+  </div>
+  
+  <div class="field">
+    <%= f.label :NumerodeClicks %><br />
+    <%= f.number_field :numberclicks %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Registrar" %>
+  </div>
+<% end %>

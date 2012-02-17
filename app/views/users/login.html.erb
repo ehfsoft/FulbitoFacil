@@ -1,0 +1,22 @@
+﻿<h2>Login</h2>
+
+<% form_for :user do |f| %>
+<td>
+	<%= error_messages_for "user" %>
+<p><tr>
+    <td class="label">Correo</td>
+    <td><%= f.text_field :email %></td>
+</tr></p>
+<p><tr>
+    <td class="label">Contraseña</td>
+    <td><%= f.password_field :password %></td>
+</tr></p>
+<p><tr>
+  <td>
+  <div class="actions">
+    <%= f.submit "Entrar" %>
+  </div>
+  </td>
+ </tr></p>
+</td>
+<% end %>

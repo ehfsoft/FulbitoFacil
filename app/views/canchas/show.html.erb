@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @cancha.name %>
+</p>
+
+<p>
+  <b>Local:</b>
+  <%= @cancha.local.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @cancha.description %>
+</p>
+
+<p>
+  <b>Dia:</b>
+  <%= @cancha.diasem %>
+</p>
+
+<p>
+
+<b>Tiempo:</b>
+  <%= @cancha.hora %>
+</p>
+
+<b>Tiempofin:</b>
+  <%= @cancha.horafin %>
+</p>
+
+<p>
+  <b>Precio Lunes a Viernes:</b>
+  <%= @cancha.preciolav %>
+</p>
+
+<p>
+  <b>Precio Sabado y Domingo:</b>
+  <%= @cancha.preciosd %>
+</p>
+
+
+<%= link_to 'Edit', edit_cancha_path(@cancha) %> |
+<%= link_to 'Back', canchas_path %>

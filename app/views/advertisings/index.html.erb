@@ -1,0 +1,35 @@
+<h1>LISTAR PUBLICIDADES</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Contenido</th>
+    <th>Fecha Inicio</th>
+    <th>Fecha Fin</th>
+    <th>Tarifa</th>
+    <th>Ubicacion</th>
+    <th>Numero de Clicks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @advertisings.each do |advertising| %>
+  <tr>
+    <td><%= advertising.title %></td>
+    <td><%= advertising.content %></td>
+    <td><%= advertising.startdate %></td>
+    <td><%= advertising.enddate %></td>
+    <td><%= advertising.rate %></td>
+    <td><%= advertising.location %></td>
+    <td><%= advertising.numberclicks %></td>
+    <td><%= link_to 'Mostrar', advertising %></td>
+    <td><%= link_to 'Editar', edit_advertising_path(advertising) %></td>
+    <td><%= link_to 'Eliminar', advertising, confirm: 'Esta seguro que desea eliminar?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva Publicidad', new_advertising_path %>

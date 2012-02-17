@@ -1,0 +1,83 @@
+<%= form_for(@fulcliente) do |f| %>
+  <% if @fulcliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fulcliente.errors.count, "error") %> prohibited this fulcliente from being saved:</h2>
+
+      <ul>
+      <% @fulcliente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apepaterno %><br />
+    <%= f.text_field :apepaterno %>
+  </div>
+  <div class="field">
+    <%= f.label :apematerno %><br />
+    <%= f.text_field :apematerno %>
+  </div>
+  
+  <div class="field"><br />
+  	<%= f.label "Sexo" %>
+    <%= f.radio_button :sexcli, "Femenino" %> Femenino
+	<%= f.radio_button :sexcli, "Masculino" %> Masculino
+  </div>
+  
+  <div class="field"><br />
+  	<%= f.label "Tipo de Documento" %>
+    <%= f.select :documenttype_id, @documenttype_array, :prompt => "Seleccione tipo de documento"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numerodoc %><br />
+    <%= f.text_field :numerodoc %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Distrito" %><br />
+    <%= f.select :clidistrict_id, @clidistrict_array, :prompt => "Seleccione distrito"  %>
+  </div>
+  
+  
+  <div class="field">
+    <%= f.label :correo %><br />
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :confcorreo %><br />
+    <%= f.text_field :confcorreo %>
+  </div>
+  <div class="field">
+    <%= f.label :contrasena %><br />
+    <%= f.text_field :contrasena %>
+  </div>
+  <div class="field">
+    <%= f.label :confcontrasena %><br />
+    <%= f.text_field :confcontrasena %>
+  </div>
+  
+  <div class="field"><br />
+  	<%= f.label "Fecha de Nacimiento" %>
+ 	<%= f.date_select :fecnacimiento , :start_year => 1914, :end_year => Time.now.year - 5  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :celular %><br />
+    <%= f.text_field :celular %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

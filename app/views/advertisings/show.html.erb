@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @advertising.title %>
+</p>
+
+<p>
+  <b>Contenido:</b>
+  <%= @advertising.content %>
+</p>
+
+<p>
+  <b>Fecha Inicio:</b>
+  <%= @advertising.startdate %>
+</p>
+
+<p>
+  <b>Fecha Fin:</b>
+  <%= @advertising.enddate %>
+</p>
+
+<p>
+  <b>Tarifa:</b>
+  <%= @advertising.rate %>
+</p>
+
+<p>
+  <b>Ubicacion:</b>
+  <%= @advertising.location %>
+</p>
+
+<p>
+  <b>Numero de Clicks:</b>
+  <%= @advertising.numberclicks %>
+</p>
+
+
+<%= link_to 'Editar', edit_advertising_path(@advertising) %> |
+<%= link_to 'Atras', advertisings_path %>

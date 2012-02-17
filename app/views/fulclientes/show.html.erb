@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @fulcliente.nombre %>
+</p>
+
+<p>
+  <b>Apepaterno:</b>
+  <%= @fulcliente.apepaterno %>
+</p>
+
+<p>
+  <b>Apematerno:</b>
+  <%= @fulcliente.apematerno %>
+</p>
+
+<p>
+  <b>Sexcli:</b>
+  <%= @fulcliente.sexcli %>
+</p>
+
+<p>
+  <b>Tipo de Documento:</b>
+  <%= @fulcliente.documenttype.shortname %>
+</p>
+
+<p>
+  <b>Numerodoc:</b>
+  <%= @fulcliente.numerodoc %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @fulcliente.direccion %>
+</p>
+
+<p>
+  <b>Distrito:</b>
+  <%= @fulcliente.clidistrict.name %>
+</p>
+
+<p>
+  <b>Correo:</b>
+  <%= @fulcliente.correo %>
+</p>
+
+<p>
+  <b>Confcorreo:</b>
+  <%= @fulcliente.confcorreo %>
+</p>
+
+<p>
+  <b>Contrasena:</b>
+  <%= @fulcliente.contrasena %>
+</p>
+
+<p>
+  <b>Confcontrasena:</b>
+  <%= @fulcliente.confcontrasena %>
+</p>
+
+<p>
+  <b>Fecnacimiento:</b>
+  <%= @fulcliente.fecnacimiento %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%= @fulcliente.celular %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_fulcliente_path(@fulcliente) %> |
+<%= link_to 'Back', fulclientes_path %>

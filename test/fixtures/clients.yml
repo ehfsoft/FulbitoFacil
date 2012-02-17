@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  apepaterno: MyString
+  apematerno: MyString
+  sexcli: MyString
+  numerodoc: MyString
+  direccion: MyString
+  correo: MyString
+  confcorreo: MyString
+  contrasena: MyString
+  confcontrasena: MyString
+  fecnacimiento: 2012-02-16
+  celular: MyString
+  documenttype: 
+  clidistricts: 
+
+two:
+  nombre: MyString
+  apepaterno: MyString
+  apematerno: MyString
+  sexcli: MyString
+  numerodoc: MyString
+  direccion: MyString
+  correo: MyString
+  confcorreo: MyString
+  contrasena: MyString
+  confcontrasena: MyString
+  fecnacimiento: 2012-02-16
+  celular: MyString
+  documenttype: 
+  clidistricts: 
