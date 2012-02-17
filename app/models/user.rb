@@ -14,4 +14,14 @@ class User < ActiveRecord::Base
   :message => "no tiene el formato correcto."
   validates_confirmation_of :email, :message => "no es el mismo que el ingresado."
   validates_confirmation_of :password, :message => "no es el mismo que el ingresado."
+  Pusher.app_id = '14736'
+  Pusher.key = 'afd35af405d6d99f9d24'
+  Pusher.secret = '28736f0f527eac5fd177'
+
+  after_create :send_to_pusher
+
+  def send_to_pusher
+    logger.info "Hi?"
+    Pusher['FulbitoFacil'].trigger("message:create",self.to_json)  
+  end
 end
