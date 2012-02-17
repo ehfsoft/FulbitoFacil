@@ -26,8 +26,6 @@ FulbitoFacil::Application.routes.draw do
   resources :documenttypes
   
   resources :sites
-  
-  resources :list
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -83,6 +81,9 @@ FulbitoFacil::Application.routes.draw do
   match "/reguser" => "users#index", :as => :reguser
   match "/login" => "users#login", :as => :login
   match "/home" => "sites#index", :as => :home
+  match "/reglocal" => "locals#index", :as => :reglocal
+  match "/regcliente" => "fulclientes#index", :as => :regcliente
+  match "/regcancha" => "canchas#index", :as => :regcancha
   
 
   # See how all your routes lay out with "rake routes"

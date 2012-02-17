@@ -10,8 +10,8 @@
 	<div id="topbar">
 	  <ul> 
 		<li><%= link_to_unless_current "Inicio", home_url %></li>
-		<li><%= link_to_unless_current "Locales", home_url %></li>
-		<li><%= link_to_unless_current "Canchas", home_url %></li>
+		<li><%= link_to_unless_current "Locales", reglocal_url %></li>
+		<li><%= link_to_unless_current "Canchas", regcancha_url %></li>
 		<li><%= link_to_unless_current "Publicidad", home_url %></li>
 		<li><%= link_to_unless_current "Acerca de", home_url %></li>
 	  </ul>
@@ -30,7 +30,7 @@
 				<h2><img src="/assets/create_indi_usr.jpg" alt="Individual User" width="25" height="22" /> 
 				<%= link_to_unless_current "Usuarios", reguser_url %> </h2>   
 				<h2><img src="/assets/create_agent_icon.jpg" alt="Agent Account" width="27" height="22" /> 
-				<%= link_to_unless_current "Clientes", :controller=>"users", :action=>"new" %> </h2>
+				<%= link_to_unless_current "Clientes", :controller=>"fulclientes", :action=>"index" %> </h2>
 				<h2><img src="/assets/create_agent_icon.jpg" alt="Agent Account" width="27" height="22" /> 
 				<%= link_to_unless_current "Login", login_url %> </h2>
 				<h2><img src="/assets/create_agent_icon.jpg" alt="Agent Account" width="27" height="22" /> 
