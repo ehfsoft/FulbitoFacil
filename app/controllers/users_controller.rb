@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       p_user = User.new(params[:user])
       user = User.find_by_email_and_password(p_user.email,p_user.password)
       if user
+		    flash[:notice] = "Se ha identificado correctamente. Bienvenido."
         redirect_to home_url
       else
         flash[:notice] = "Correo o Clave son incorrectos."
@@ -25,6 +26,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout
+    flash[:notice] = "Gracias por visitarnos."
+    redirect_to home_url
+  end
+  
   # GET /users/1
   # GET /users/1.json
   def show

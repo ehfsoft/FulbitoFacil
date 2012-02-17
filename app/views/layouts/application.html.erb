@@ -10,9 +10,9 @@
 	<div id="topbar">
 	  <ul> 
 		<li><%= link_to_unless_current "Inicio", home_url %></li>
+		<li><%= link_to_unless_current "Locales", home_url %></li>
 		<li><%= link_to_unless_current "Canchas", home_url %></li>
 		<li><%= link_to_unless_current "Publicidad", home_url %></li>
-		<li><%= link_to_unless_current "Reportes", home_url %></li>
 		<li><%= link_to_unless_current "Acerca de", home_url %></li>
 	  </ul>
 	</div>
@@ -28,11 +28,13 @@
 		<div id="useractions">
 			<div id="headings"> 
 				<h2><img src="/assets/create_indi_usr.jpg" alt="Individual User" width="25" height="22" /> 
-				<%= link_to_unless_current "Registro de Usuarios", reguser_url %> </h2>   
+				<%= link_to_unless_current "Usuarios", reguser_url %> </h2>   
 				<h2><img src="/assets/create_agent_icon.jpg" alt="Agent Account" width="27" height="22" /> 
-				<%= link_to_unless_current "Registro de Clientes", :controller=>"users", :action=>"new" %> </h2>
+				<%= link_to_unless_current "Clientes", :controller=>"users", :action=>"new" %> </h2>
 				<h2><img src="/assets/create_agent_icon.jpg" alt="Agent Account" width="27" height="22" /> 
 				<%= link_to_unless_current "Login", login_url %> </h2>
+				<h2><img src="/assets/create_agent_icon.jpg" alt="Agent Account" width="27" height="22" /> 
+				<%= link_to_unless_current "Logout", home_url %> </h2>
 			</div>
 		</div>
 	</div>

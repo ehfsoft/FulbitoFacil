@@ -1,65 +1,107 @@
+<table border="0" width="100%">
 <%= form_for(@user) do |f| %>
+<tr>
   <% if @user.errors.any? %>
-  <td>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this local from being saved:</h2>
-
-      <ul>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
-    </td>
   <% end %>
-
+</tr>
+<tr>
   <div class="field">
-  	<%= f.label "Nombre" %>
-    <%= f.text_field :name %>
+  	<td><%= f.label "Nombre" %></td>
+    <td><%= f.text_field :name %></td>
+	<td></td>
+	<td></td>
   </div>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
   <div class="field"><br />
-  	<%= f.label "Apellido Paterno" %>
-  	<%= f.text_field :lastname %>
+  	<td><%= f.label "Apellido Paterno" %></td>
+  	<td><%= f.text_field :lastname %></td>
+  	<td><%= f.label "Apellido Materno" %></td>
+  	<td><%= f.text_field :maidenname %></td>
   </div>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
   <div class="field"><br />
-  	<%= f.label "Apellido Materno" %>
-  	<%= f.text_field :maidenname %>
+  	<td><%= f.label "Sexo" %></td>
+    <td><%= f.radio_button :sex, "Femenino" %> Femenino
+	<%= f.radio_button :sex, "Masculino" %> Masculino</td>
+	<td></td>
+	<td></td>
   </div>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
   <div class="field"><br />
-  	<%= f.label "Sexo" %>
-    <%= f.radio_button :sex, "Femenino" %> Femenino
-	<%= f.radio_button :sex, "Masculino" %> Masculino
-  </div>
-  <div class="field"><br />
-  	<%= f.label "Tipo de Documento" %>
-    <%= f.select :documenttype_id, @documenttype_array, :prompt => "Seleccione tipo de documento"  %>
-  </div>
-  <div class="field"><br />
-  	<%= f.label "Numero de Documento" %>
-    <%= f.text_field :documentnumber,
+  	<td><%= f.label "Tipo de Documento" %></td>
+    <td><%= f.select :documenttype_id, @documenttype_array, :prompt => "Seleccione tipo de documento"  %></td>
+  	<td><%= f.label "Numero de Documento" %></td>
+    <td><%= f.text_field :documentnumber,
     :size => User::MAX_SIZECAMPO,
-    :maxlength => User::MAX_NUMDOCUMENTO %>
+    :maxlength => User::MAX_NUMDOCUMENTO %></td>
   </div>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
   <div class="field"><br />
-  	<%= f.label "Correo" %>
-    <%= f.text_field :email %>
-    <%= f.label "Repetir Correo" %>
-    <%= f.text_field :email_confirmation %>
+  	<td><%= f.label "Correo" %></td>
+    <td><%= f.text_field :email %></td>
+    <td><%= f.label "Repetir Correo" %></td>
+    <td><%= f.text_field :email_confirmation %></td></td>
   </div>
+</tr>
+<tr>
   <div class="field"><br />
-  	<%= f.label "Contraseña" %>
-    <%= f.password_field :password %>
-    <%= f.label "Repetir Contraseña" %>
-    <%= f.password_field :password_confirmation %>
+  	<td><%= f.label "Contraseña" %></td>
+    <td><%= f.password_field :password %></td>
+    <td><%= f.label "Repetir Contraseña" %></td>
+    <td><%= f.password_field :password_confirmation %></td>
   </div>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
   <div class="field"><br />
-  	<%= f.label "Fecha de Nacimiento" %>
- 	<%= f.date_select :datebirth , :start_year => 1914, :end_year => Time.now.year - 5  %>
+  	<td><%= f.label "Fecha de Nacimiento" %></td>
+    <td><%= f.date_select :datebirth %></td>
+	<td></td>
+	<td></td>
   </div>
-    
-  
-  
+</tr>
+<tr>
   <div class="actions">
-    <%= f.submit "Guardar" %>
+	<td></td>
+	<td></td>
+    <td><%= f.submit "Guardar" %></td>
+	<td></td>
   </div>
+ </tr>
 <% end %>

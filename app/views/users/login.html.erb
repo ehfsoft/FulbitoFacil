@@ -1,22 +1,42 @@
-﻿<h2>Login</h2>
-
-<% form_for :user do |f| %>
-<td>
-	<%= error_messages_for "user" %>
-<p><tr>
-    <td class="label">Correo</td>
-    <td><%= f.text_field :email %></td>
-</tr></p>
-<p><tr>
-    <td class="label">Contraseña</td>
-    <td><%= f.password_field :password %></td>
-</tr></p>
-<p><tr>
-  <td>
+﻿<table border="0" width="100%" align="top">
+<tr>
+<td colspan="4"><h2 align="center"> Login </h2></td>
+</tr>
+<tr>
+<td colspan="4">.</td>
+</tr>
+<tr>
+<td colspan="4" align="center"><%= flash[:notice] %></td>
+</tr>
+<%= form_for :user do |f| %>
+<tr>
+	<td width="25%"></td>
+  <div class="field"><br />
+  	<td width="25%"><%= f.label "Correo" %></td>
+    <td width="25%"><%= f.text_field :email %></td><br />
+  </div>
+  <td width="25%"></td>
+</tr>
+<tr>
+	<td width="25%"></td>
+  <div class="field"><br />
+  	<td width="25%"><%= f.label "Contraseña" %></td>
+    <td width="25%"><%= f.password_field :password %></td><br />
+  </div>
+  <td width="25%"></td>
+</tr>
+<tr>
+<td width="25%"> </td>
+<td width="25%"> </td>
+<td width="25%"> </td>
+<td width="25%"> </td>
+</tr>
+<tr>
+<td colspan="4" align="center">
   <div class="actions">
     <%= f.submit "Entrar" %>
   </div>
-  </td>
- </tr></p>
 </td>
+</tr>
 <% end %>
+</table>
