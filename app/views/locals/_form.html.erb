@@ -1,4 +1,7 @@
+<table border="0" width="100%">
 <%= form_for(@local) do |f| %>
+<tr>
+<td colspan="4">
   <% if @local.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@local.errors.count, "error") %> prohibited this local from being saved:</h2>
@@ -10,29 +13,52 @@
       </ul>
     </div>
   <% end %>
-
+ </td>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label "Nombre" %><br />
-    <%= f.text_field :name %>
+	<td width="25%"></td>
+    <td><%= f.label "Nombre" %></td>
+    <td><%= f.text_field :name %></td>
+	<td width="25%"></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label "Direccion" %><br />
-    <%= f.text_field :address %>
+	<td></td>
+    <td><%= f.label "Direccion" %></td>
+    <td><%= f.text_field :address %></td>
+	<td></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label "Direccion Google" %><br />
-    <%= f.text_field :addressgoogle %>
+	<td></td>
+    <td><%= f.label "Direccion Google" %></td>
+    <td><%= f.text_field :addressgoogle %></td>
+	<td></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label "Telefono" %><br />
-    <%= f.text_field :phone %>
+	<td></td>
+    <td><%= f.label "Telefono" %></td>
+    <td><%= f.text_field :phone %></td>
+	<td></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label "Distrito" %><br />
-    <%= f.select :district_id, @district_array, :prompt => "Seleccione distrito"  %>
+	<td></td>
+    <td><%= f.label "Distrito" %></td>
+    <td><%= f.select :district_id, @district_array, :prompt => "Seleccione distrito"  %></td>
+	<td></td>
   </div>
-
+</tr>
+<tr>
   <div class="actions">
-    <%= f.submit "Guardar" %>
+    <td colspan="4" align="center"><%= f.submit "Guardar" %></td>
   </div>
+</tr>
 <% end %>
+</table>

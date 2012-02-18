@@ -1,11 +1,13 @@
 <table border="0" width="100%">
 <%= form_for(@user) do |f| %>
 <tr>
+<td>
   <% if @user.errors.any? %>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
   <% end %>
+</td>
 </tr>
 <tr>
   <div class="field">

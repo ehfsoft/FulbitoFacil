@@ -1,51 +1,85 @@
+<table border="0" width="100%">
+<tr>
+<td>
 <p id="notice"><%= notice %></p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Nombre:</b>
   <%= @user.name %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Apellido Paterno:</b>
   <%= @user.lastname %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Apellido Materno:</b>
   <%= @user.maidenname %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Sexo:</b>
   <%= @user.sex %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Tipo de Documento:</b>
   <%= @user.documenttype.shortname %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Numero de Documento:</b>
   <%= @user.documentnumber %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Correo:</b>
   <%= @user.email %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Contraseña:</b>
   <%= @user.password %>
 </p>
-
+</td>
+</tr>
+<tr>
+<td>
 <p>
   <b>Fecha de Nacimiento:</b>
   <%= @user.datebirth %>
 </p>
-
-
-
+</td>
+</tr>
+<tr>
+<td>
 <%= link_to 'Editar', edit_user_path(@user) %> |
 <%= link_to 'Atras', users_path %>
+</td>
+</tr>
+</td>
